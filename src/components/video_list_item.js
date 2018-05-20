@@ -1,9 +1,9 @@
 import React from 'react'
 
-const VideoListItem = ({vi}) => {
+const VideoListItem = ({vi, onVideoSelect}) => {
     const imageUrl = vi.snippet.thumbnails.default.url;
     return(
-        <li className="list-group-item">
+        <li onClick={()=> onVideoSelect(vi)} className="list-group-item">
             <div className="video-list media">
                 <div className="media-left">
                     <img className="media-object" src={imageUrl}/>
